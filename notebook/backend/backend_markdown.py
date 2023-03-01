@@ -37,7 +37,7 @@ def evaluate_markdown(text):
     result_blob = ''
     for i, part in enumerate(parts):
         if i < doubledollar_count and i % 2 == 1:
-            part = pypandoc.convert('$' + part + '$',
+            part = pypandoc.convert_text('$' + part + '$',
                                     to='html5',
                                     format='latex',
                                     extra_args=['--mathml'])
